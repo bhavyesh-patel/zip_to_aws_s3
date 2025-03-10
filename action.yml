@@ -1,0 +1,32 @@
+name: "ZIP to AWS S3"
+description: "Create ZIP from Source and Uplaod to AWS S3 Bucket"
+inputs:
+  zip-source:
+    description: "Source Folder to zip"
+    required: true
+  zip-file:
+    description: "Zip file name"
+    required: true
+  aws-access-key:
+    description: "AWS Access Key"
+    required: true
+  aws-secret-access-key:
+    description: "AWS Secret Access Key"
+    required: true
+  aws-default-region:
+    description: "AWS Default Region"
+    required: true
+  aws-s3-bucket:
+    description: "AWS S3 Bucket Name"
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - {{ inputs.zip-source }}
+    - {{ inputs.zip-file }}
+    - {{ inputs.aws-access-key }}
+    - {{ inputs.aws-secret-access-key }}
+    - {{ inputs.aws-default-region }}
+    - {{ inputs.aws-s3-bucket }}
