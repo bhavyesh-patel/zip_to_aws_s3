@@ -1,5 +1,8 @@
 name: "ZIP to AWS S3"
 description: "Create ZIP from Source and Uplaod to AWS S3 Bucket"
+branding:
+  icon: 'upload-cloud'
+  color: 'purple'
 inputs:
   zip-source:
     description: "Source Folder to zip"
