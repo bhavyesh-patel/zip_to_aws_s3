@@ -27,9 +27,9 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - {{ inputs.zip-source }}
-    - {{ inputs.zip-file }}
-    - {{ inputs.aws-access-key }}
-    - {{ inputs.aws-secret-access-key }}
-    - {{ inputs.aws-default-region }}
-    - {{ inputs.aws-s3-bucket }}
+    - ${{ inputs.zip-source }}
+    - ${{ inputs.zip-file }}
+    - ${{ inputs.aws-access-key }}
+    - ${{ inputs.aws-secret-access-key }}
+    - ${{ inputs.aws-default-region }}
+    - ${{ inputs.aws-s3-bucket }}
